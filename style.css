@@ -1,0 +1,110 @@
+/* Background Animation */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.8);
+  width: 420px;
+  transform: scale(0.95);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { transform: scale(1); opacity: 1; }
+}
+
+h1.glow {
+  margin-bottom: 20px;
+  color: #e94560;
+  text-shadow: 0 0 10px #e94560, 0 0 20px #ff4d6d;
+}
+
+input[type="file"],
+input[type="password"] {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  width: 90%;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input[type="password"]:focus {
+  box-shadow: 0 0 10px #e94560;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+button {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.3s ease;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #0f3460;
+  transform: scale(1.1);
+}
+
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 15px 0;
+  height: 10px;
+  display: none;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #e94560, #ff4d6d);
+  transition: width 0.2s ease;
+}
+
+canvas.image-canvas {
+  margin-top: 20px;
+  max-width: 100%;
+  border: 2px solid #e94560;
+  border-radius: 15px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+canvas.show {
+  opacity: 1;
+  transform: scale(1);
+}

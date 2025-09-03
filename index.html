@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Image Encryption</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container fade-in">
+    <h1 class="glow">🔐 Image Encryption & Decryption</h1>
+    
+    <input type="file" id="upload" accept="image/*">
+    <input type="password" id="key" placeholder="Enter Secret Key">
+
+    <div class="buttons">
+      <button onclick="encryptImage()">Encrypt</button>
+      <button onclick="decryptImage()">Decrypt</button>
+      <button onclick="downloadImage()">Download</button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-container" id="progressContainer">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <canvas id="canvas" class="image-canvas"></canvas>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
